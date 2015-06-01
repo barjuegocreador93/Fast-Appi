@@ -22,15 +22,7 @@ function actv(id)
 	{
 		var name=this.name;
 		var scla=this.scla;
-		var id=this.id;		
-		$("#"+this.name+this.id+"").addClass("btn-default");
-		var css= $("h1").css("font-size");
-		var css_n=parseInt(css);
-		css_n=css_n-2;
-		css= toString(css_n);
-		
-		$(".btn").css({"font-size":""+css+""});
-					
+		var id=this.id;						
 		$("#"+name+id+"").click(function()
 		{
 			for(i=1;isReady("."+scla+i+"")||isJQ("."+scla+i+"",":not(:visible)");i++)
