@@ -1,4 +1,4 @@
-/// <reference path="typings/jquery/jquery.d.ts"/>
+
 //creado por Camilo Barbosa
 function isJQ(html,html2)
 {
