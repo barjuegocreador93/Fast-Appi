@@ -121,35 +121,7 @@ function doc(id,clase)
 	this.add=function(docs)
 	{					
 		this.ele.push(docs);		
-	};
-	this.prints= function(level)
-	{
-		for(var i=0;i < this.ele.length; i++)
-		{
-			if(this.ele[i].levl===level)this.ele[i].print();						
-		}	
-	};
-	this.sh_itm_index=function(scla, id)
-	{
-		for(var i=0;i < this.ele.length; i++)
-		{
-			if(this.ele[i].scla===scla&&this.ele[i].id===id)return i;						
-		}
-		
-	};
-	this.sh_Name_id=function(name, id, press)
-	{		
-		for(var i=0;i < this.ele.length; i++)
-		{			
-			if(this.ele[i].name===name&&this.ele[i].id===id&&press===1)this.ele[i].pres=press;
-			else if(this.ele[i].name===name&&this.ele[i].id!==id)
-			{
-				
-				this.ele[i].pres=0;
-								
-			}								
-		}		
-	};		
+	};	
 	this.acction=function()
 	{
 		for(var i=0;i < this.ele.length; i++)
