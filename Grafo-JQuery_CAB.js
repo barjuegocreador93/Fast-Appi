@@ -1,4 +1,3 @@
-
 //creado por Camilo Barbosa
 function isJQ(html,html2)
 {
@@ -180,5 +179,3 @@ function doc(id,clase)
 	};
 	
 }
-
-
