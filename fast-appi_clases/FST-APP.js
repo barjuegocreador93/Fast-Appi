@@ -142,9 +142,15 @@ function doc(clase_activ,Clase_Esclava)
 			if(isJQ("."+x.name+x.id+"",".activ_on"))x.pres=1;		
 			this.add(x);
 			delete x;
+			if(isReady("."+this.name+"_Index"))
+			{
+				$("."+this.name+"_Index").append("<button class="+this.name+i+" >"+$("."+this.name+i+".getText").text()+"</button>");
+			}
 		}
 		for(var i=0;i<this.ele.length;i++)
 		{		
+			var txt=this.ele[i].scla+this.ele[i].id+"_indx";
+			$("."+this.name+"_Index").append("<div class="+txt+"></div>");
 			for(var j=1;isReady("."+this.ele[i].name+this.ele[i].id+"_"+j+"")||isJQ("."+this.ele[i].name+this.ele[i].id+"_"+j+"",":not(:visible)");j++)
 			{
 				var x1= new actv(j);
@@ -155,7 +161,11 @@ function doc(clase_activ,Clase_Esclava)
 				this.ele[i].nsca++;
 				x1.levl=this.max_lvl;						
 				this.add(x1);			
-				delete x1;			
+				
+				if(isReady("."+this.name+"_Index"))
+				{
+					$("."+txt).append("<button class="+x1.name+j+" >"+$("."+x1.name+j+".getText").text()+"</button></div>");
+				}delete x1;			
 			}				
 		}		
 		this.acction();
