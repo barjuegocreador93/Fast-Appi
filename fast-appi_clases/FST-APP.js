@@ -133,6 +133,7 @@ function doc(clase_activ,Clase_Esclava)
 	};
 	this.main=function()
 	{
+		$("."+this.name+"_Index").append("<ul></ul>");
 		for(var i=1;isReady("."+this.name+i+"")||isJQ("."+this.name+i+"",":not(:visible)"); i++)
 		{
 			var x=new actv(i);
@@ -144,13 +145,15 @@ function doc(clase_activ,Clase_Esclava)
 			delete x;
 			if(isReady("."+this.name+"_Index"))
 			{
-				$("."+this.name+"_Index").append("<button class="+this.name+i+" >"+$("."+this.name+i+".getText").text()+"</button>");
+				$("."+this.name+"_Index ul").append("<li><button class="+this.name+i+" >"+$("."+this.name+i+".getText").text()+"</button></li>");
+				$("."+this.name+"_Index ul li").css("list-style","none");
 			}
 		}
 		for(var i=0;i<this.ele.length;i++)
 		{		
 			var txt=this.ele[i].scla+this.ele[i].id+"_indx";
-			$("."+this.name+"_Index").append("<div class="+txt+"></div>");
+			if(isReady("."+this.ele[i].name+this.ele[i].id+"_"+1+"")||isJQ("."+this.ele[i].name+this.ele[i].id+"_"+1+"",":not(:visible)"))
+			$("."+this.name+"_Index ul").append("<ul class="+txt+"></ul>");
 			for(var j=1;isReady("."+this.ele[i].name+this.ele[i].id+"_"+j+"")||isJQ("."+this.ele[i].name+this.ele[i].id+"_"+j+"",":not(:visible)");j++)
 			{
 				var x1= new actv(j);
@@ -164,7 +167,8 @@ function doc(clase_activ,Clase_Esclava)
 				
 				if(isReady("."+this.name+"_Index"))
 				{
-					$("."+txt).append("<button class="+x1.name+j+" >"+$("."+x1.name+j+".getText").text()+"</button></div>");
+					$("."+txt).append("<li><button class="+x1.name+j+" >"+$("."+x1.name+j+".getText").text()+"</button></li>");
+					$("."+txt+" li").css("list-style","none");
 				}delete x1;			
 			}				
 		}		
