@@ -13,7 +13,7 @@ Para incorporar a tu proyecto:
 
 `<script src="js/FST-APP.js" type="text/javascript"></script>`
 
-[Como usar Fast-Api](https://github.com/barjuegocreador93/Fast-Appi/wiki/Fast-A$
+[Como usar Fast-Api](https://github.com/barjuegocreador93/Fast-Appi/wiki/Fast-Appi$Clases)
 
 
 
