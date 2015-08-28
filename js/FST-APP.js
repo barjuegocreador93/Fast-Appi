@@ -59,7 +59,8 @@ function actv(id)
 			{
 				$("."+name+id+"_"+i+"").slideDown();
 			}
-			$("."+scla+id+"_off").slideUp();		
+			$("."+scla+id+"_off").slideUp();
+			$("."+scla+id+"_on").slideDown();
 				
 		});		
 		this.print();
