@@ -76,7 +76,7 @@ function fast_appi(activ, slave)
         var nactiv = "." + this.activ;
         var nslave = "." + this.slave;
 
-        for (var i = 1; isReady("." + this.activ + i + ""); i++)
+        for (var i = 1; looking("." + this.activ + i + ""); i++)
         {
 
             var cactiv = "." + this.activ + i + "";
