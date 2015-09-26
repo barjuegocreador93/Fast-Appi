@@ -1,22 +1,38 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Fast-Appi Template</title>
         <meta charset="utf-8" />
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/FST-APP.js" type="text/javascript"></script>
+        <script>
+        $(document).ready(function()
+        {
+            for(var i=1;i<=1000;i++)
+            {
+                $('#activ').append("<button class='activ"+i+" getText'>Opcion"+i+"</button>");
+                $('#salve').append("<div class='slave"+i+"  h_1'>jsdñklajlkdja</div>");
+            }
+            var x=new fast_appi("activ","slave");
+            x.run();
+            var api= new fast_appi("aid","acl");
+            api.run();
+            
+            
+            
+            
+        });
+    </script>
     </head>
     <body>        
             <button class="aid1 activ_on getText">Inicio</button>
             <button class="aid2 getText">New Conte</button>
             <div class="acl1 h_1"></div>
             <div class="acl2 h_2"></div>
+            <div id="activ"></div>
+            <div id="salve"></div>
         
     </body>
-    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-    <script src="js/FST-APP.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function()
-        {
-            var api= new doc("aid","acl");
-            api.main();
-        });
-    </script>
+    
+    
 </html>
