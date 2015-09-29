@@ -13,9 +13,9 @@
                 $('#activ').append("<button class='activ"+i+" getText'>Opcion"+i+"</button>");
                 $('#salve').append("<div class='slave"+i+"  h_1'>jsdñklajlkdja</div>");
             }
-            var x=new fast_appi("activ","slave");
+            var x=new fast_appi(".activ",".slave");
             x.run();
-            var api= new fast_appi("aid","acl");
+            var api= new fast_appi(".aid",".acl");
             api.run();
             
             
@@ -25,9 +25,14 @@
     </script>
     </head>
     <body>        
-            <button class="aid1 activ_on getText">Inicio</button>
-            <button class="aid2 getText">New Conte</button>
-            <div class="acl1 h_1"></div>
+            <button class="aid1 activ_on getText activ_togg">Inicio</button>
+            <button class="aid2 getText ">New Conte</button>
+            <div class="acl1 h_1">
+                <button class="aid1_1 getText">Sub1</button>
+                <button class="aid1_2 getText">Sub2</button>
+                <div class="acl1_1 h_3"></div>
+                <div class="acl1_2 h_3"></div>
+            </div>
             <div class="acl2 h_2"></div>
             <div id="activ"></div>
             <div id="salve"></div>
