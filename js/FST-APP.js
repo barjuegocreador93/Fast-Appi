@@ -72,7 +72,7 @@ function fast_appi(activ, slave)
     var z = 0;
 
     for (var i = 0; i < ArrFastAppi.length; i++)
-        if (ArrFastAppi[i].activ === ob.activ)
+        if (ArrFastAppi[i].activ === fp.activ)
             z++;
 
     if (!z)
