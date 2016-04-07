@@ -1,11 +1,22 @@
 
 //Ejemplo:  como en CSS: Clase (.)  id(#)
 /**
- * main.js=>
- $(document).ready(function(){
+*index.html => head=>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/FST-APP.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
      var app=new fast_appi(".interruptor",".actorBajoInterruptor");
      app.run();
  });
+</script>
+ 
+ *index.html => body=>
+ <a class="interruptor1">Presioname</a>
+ <div class="actorBajoInterruptor1">
+      Hola mundo!!
+ </div>
+ 
 **/
 
 
