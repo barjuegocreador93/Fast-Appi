@@ -1,19 +1,73 @@
+
+//Ejemplo:
+/**
+ * main.js=>
+ $(document).ready(function(){
+     var app=new fast_appi(".interruptor",".actorBajoInterruptor");
+     app.run();
+ });
+**/
+
+
+function fast_appi(activ, slave)//Obejeto 
+{
+    this.activ = activ;
+    this.slave = slave;
+    this.inter=[];
+
+    var fp = {activ: this.activ, slave: this.slave, id: 0};
+    var z = 0;
+
+    for (var i = 0; i < ArrFastAppi.length; i++)
+        if (ArrFastAppi[i].activ === fp.activ)
+            z++;
+
+    if (!z)
+        ArrFastAppi.push(fp);
+    this.fps = ArrFastAppi.length - 1;
+
+    this.run = function ()
+    {
+        
+        for (var i = 1; looking(this.activ + i + ""); i++)
+        {
+
+            var cactiv = this.activ + i + "";
+            var cslave = this.slave + i + "";
+            $(cslave).hide();
+            var m=new ob(cactiv, cslave, this.activ, this.slave, i, this.fps);
+            this.inter.push(m);
+
+        }
+    };
+}
+
+
+//Funciones Basicas Y Variables:
+
+
+
+
+
+
 var ArrFastAppi = [];
-function isJQ(html, html2)
+
+
+function isJQ(html, html2) //Permite saber si un elemento html contiene un id(#) o clase(.)
 {
     return $(html).is(html2);
 }
-function isReady(html)
+function isReady(html)//Permite saber si un elemento html esta a la vista del usuario
 {
     return isJQ(html, ":visible");
 }
-function looking(html)
+function looking(html)//permiete saber si existe un elemento html id o clase
 {
     return isReady(html) || isJQ(html, ":not(:visible)");
 }
 
 
-function ob(activ, slave, nactiv, nslave, id, fps)
+function ob(activ, slave, nactiv, nslave, id, fps)//funcion basica de fast_api
 {
     
         $(activ).click(function () {
@@ -70,37 +124,5 @@ function ob(activ, slave, nactiv, nslave, id, fps)
     
     return;
 
-}
-function fast_appi(activ, slave)
-{
-    this.activ = activ;
-    this.slave = slave;
-    this.inter=[];
-
-    var fp = {activ: this.activ, slave: this.slave, id: 0};
-    var z = 0;
-
-    for (var i = 0; i < ArrFastAppi.length; i++)
-        if (ArrFastAppi[i].activ === fp.activ)
-            z++;
-
-    if (!z)
-        ArrFastAppi.push(fp);
-    this.fps = ArrFastAppi.length - 1;
-
-    this.run = function ()
-    {
-        
-        for (var i = 1; looking(this.activ + i + ""); i++)
-        {
-
-            var cactiv = this.activ + i + "";
-            var cslave = this.slave + i + "";
-            $(cslave).hide();
-            var m=new ob(cactiv, cslave, this.activ, this.slave, i, this.fps);
-            this.inter.push(m);
-
-        }
-    };
 }
 
