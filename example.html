@@ -19,6 +19,11 @@
             api.run();
             
             
+            $(".activ"+10+"").addClass("disabled");
+            $("#removeClass").click(function(){
+                $(".activ"+10+"").removeClass("disabled");
+            });
+            
             
             
         });
@@ -31,6 +36,8 @@
             <div class="acl2 h_2"></div>
             <div id="activ"></div>
             <div id="salve"></div>
+            <br>
+            <button id="removeClass">Activame 10</button>
         
     </body>
     
