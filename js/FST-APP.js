@@ -1,5 +1,5 @@
 
-//Ejemplo:
+//Ejemplo:  como en CSS: Clase (.)  id(#)
 /**
  * main.js=>
  $(document).ready(function(){
